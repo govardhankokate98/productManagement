@@ -67,7 +67,6 @@ const sendMailToAdminForReceivedOrder = async () => {
     }
 }
 
-sendMailToAdminForReceivedOrder()
 module.exports = {
     sendMailToAdminForReceivedOrder
 }

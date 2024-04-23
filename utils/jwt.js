@@ -15,7 +15,7 @@ const generateToken = (req) => {
 const verifyJWTToken = (req, res, next) => {
     let jwtSecretKey = process.env.JWT_SECRET_KEY;
     let token = req.headers.authorization;
-    token = token.substring(7);
+    token = token.split(' ')[1];
     try {
         if (token) {
             jwt.verify(token, jwtSecretKey, (err, decoded) => {
